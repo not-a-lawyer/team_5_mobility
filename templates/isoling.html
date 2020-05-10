@@ -10,10 +10,27 @@
 <div style="width: 100%; height: 100%" id="mapContainer"></div>
 
 <script>
+    var platform = new H.service.Platform({
+  'apikey': '{{apikey}}'
+});
+// Retrieve the target element for the map:
+var targetElement = document.getElementById('mapContainer');
+
+// Get the default map types from the platform object:
+var defaultLayers = platform.createDefaultLayers();
+
+// Instantiate the map:
+var map = new H.Map(
+  document.getElementById('mapContainer'),
+  defaultLayers.vector.normal.map,
+  {
+    zoom: 10,
+    center: { lat: 52.51, lng: 13.4 }
+  });
 var routingParams = {
   'mode': 'fastest;car;',
-  'start': 'geo!52.5,13.4',
-  'range': '900',
+  'start': 'geo!{{origin}}',
+  'range': '1200',
   'rangetype': 'time'
 };
 
