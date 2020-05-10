@@ -7,3 +7,7 @@ The project implements several HERE features
 
 ### Routing
 ![](route_berlin.png)
+
+### Isoling
+![](small_isoling.png)
+
