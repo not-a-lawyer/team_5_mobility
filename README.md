@@ -15,7 +15,7 @@ The project implements several HERE features
 
 ### Time and Emissions for intermodal routes
 
-See `python_logic.py` for functions to compute overall time, or emission.
+See `python_logic.py` for functions to compute overall time or emissions.
 
 Emissions are based on this report:
 ![](co2.png)
