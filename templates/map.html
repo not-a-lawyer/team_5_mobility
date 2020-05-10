@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"type="text/javascript" charset="utf-8"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+
+<body style='margin: 0'>
+<div style="width: 100%; height: 100%" id="mapContainer"></div>
+
+<script>
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+    'apikey': '{{apikey}}'
+    });
+
+    // latitude and Longitude values assigned to constants
+	  const lng = {{start_lng}};
+	  const lat = {{start_lat}};
+	  const end_lng = {{end_longitude}};
+	  const end_lat = {{end_latitude}};
+
+    // Obtain the default map types from the platform object
+	  var defaultLayers = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    defaultLayers.vector.normal.map,
+    {
+      zoom: 10,
+      center: { lat: lat, lng: lng }
+    });
+
+    // Showing a default Marker on the Map
+	  const marker = new H.map.Marker({lat: lat, lng: lng});
+	  const end_marker = new H.map.Marker({lat: end_lat, lng: end_lng});
+	  map.addObject(marker);
+	  map.addObject(end_marker);
+</script>
+</body>
+</html>
