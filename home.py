@@ -110,7 +110,7 @@ def route_func():
 
 @app.route('/isoling')
 def isoling_func():
-    return render_template('isoling.html')  #
+    return render_template('isoling.html', apikey=api_key, origin=str(start_latitude) + ',' + str(start_longitude))  #
 
 
 if __name__ == '__main__':
