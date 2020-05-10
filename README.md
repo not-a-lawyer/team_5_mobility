@@ -12,7 +12,7 @@ The project implements several HERE features
 This could be an example for an isolating map when using a car with a fixed amount of carbon to emit.
 ![](small_isoling.png)
 
-This could be an example for an isolating map when using a bicycle with a fixed amount of carbon to emit.
+This could be an example for an isolating map when using a transit and a bicycle with a fixed amount of carbon to emit.
 ![](large_isoling.png)
 
 ### Intermodal Routing
