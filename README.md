@@ -21,6 +21,8 @@ This could be an example for an isolating map when using a transit and a bicycle
 
 See `python_logic.py` for functions to compute overall time or emissions.
 
+`compute_emissions()` together with a distance restriction can be used, to generate a co2-fixed isolating map.
+
 Emissions are based on this report:
 ![](co2.png)
 
